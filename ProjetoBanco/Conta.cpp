@@ -74,6 +74,10 @@ int Conta::GetNumeroDaConta() {
     return NumeroDeContas;
 }
 
+void Conta::GetEnderelo() {
+    std::cout << "\n O this contém dentro dentro o endereço " << this << '\n';
+}
+
 /*Aqui pode haver um erro chamado Problema de ambiguidade, para que isso não aconteça
 podemos usar o this*/
 void Conta::SetBanco(std::string Banco) {

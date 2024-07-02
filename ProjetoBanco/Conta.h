@@ -29,6 +29,7 @@ public :
 	std::string GetTitular();
 	int GetAgencia();
 	int GetNumeroDaConta();
+	void GetEnderelo();
 
 	/*MÉTODOS ACESSORES SET*/
 

@@ -11,9 +11,14 @@ int main() {
 	setlocale(LC_ALL, "portuguese");
 
 	//Esses dois objetos estão alocados na memória STACK/RAM
+	/**************************************************************************/
 	Conta ContaCliente01;
 	Conta ContaCliente02;
 
+	std::cout << "Endereço de memória do Cliente01 " << &ContaCliente01 << '\n';
+	std::cout << "Endereço de memória do Cliente01 " << &ContaCliente02 << '\n';
+
+	
 	ContaCliente01.SetBanco("Nubank");
 	ContaCliente01.SetTitular("Fernando");
 	ContaCliente01.SetAgencia(3232);
