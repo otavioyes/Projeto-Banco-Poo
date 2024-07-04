@@ -16,7 +16,10 @@ int main() {
 	Conta ContaCliente02;
 
 	std::cout << "Endereço de memória do Cliente01 " << &ContaCliente01 << '\n';
-	std::cout << "Endereço de memória do Cliente01 " << &ContaCliente02 << '\n';
+	ContaCliente01.GetEnderecoThis();
+
+	std::cout << "Endereço de memória do Cliente02 " << &ContaCliente02 << '\n';
+	ContaCliente02.GetEnderecoThis();
 
 	
 	ContaCliente01.SetBanco("Nubank");
@@ -41,7 +44,7 @@ int main() {
 	ContaCliente02.Sacar(2000.00);
 	ContaCliente02.ConsultarSaldo();
 
-	ContaCliente01.Transferir(ContaCliente01, 777.55);
+	ContaCliente01.Transferir(ContaCliente02, 777.55);
 	
 	ContaCliente01.Sacar(350.01); 
 
