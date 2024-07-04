@@ -3,6 +3,35 @@
 #include <iostream>
 #include <string>
 
+//Construtor padrão/default e também posso usar o construtor padrão para inicializar os atributos do objeto com algum
+//valor padrão e evitar lixo de memória.
+Conta::Conta(){
+
+    this->Banco = "";
+    this->Titular = "";
+    this->Agencia = 0;
+    this->NumeroDeContas = 0;
+    this->Saldo = 0.0;
+}
+
+
+//Construotor com parametros 
+Conta::Conta(std::string Banco, std::string Titular, int Agencia, int NumeroDeContas, double Saldo) {
+
+    this->Banco = Banco;
+    this->Titular = Titular;
+    this->Agencia = Agencia;
+    (*this).NumeroDeContas = NumeroDeContas;
+    (*this).Saldo = Saldo;
+
+    std::cout << "Construtor desse objeto: " << this << " Executado.\n";
+
+}
+
+Conta::~Conta() {
+    std::cout << "Destrutor desse objeto: " << this << " Executado.\n";
+}
+
 bool Conta::Sacar(double Valor) {
    
     if (Saldo < Valor) {
